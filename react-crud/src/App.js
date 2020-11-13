@@ -17,7 +17,7 @@ const App = (props) => {
               <div className='container'>
                 <Alerts />
                 <Switch>
-                  <PrivateRoute exact path='/' component={Home} />
+                  <Route exact path='/' component={Home} />
                 </Switch>
               </div>
             </Fragment>
