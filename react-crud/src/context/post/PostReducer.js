@@ -33,7 +33,7 @@ export default (state, action) => {
     case UPDATE_POST:
       return {
         ...state,
-        posts: state.posts.map(post =>  post._id === action.payload._id ? action.payload : post),
+        posts: state.posts.map(post =>  post.Id === action.payload.Id ? action.payload : post),
         loading: false
       };
 
@@ -41,7 +41,7 @@ export default (state, action) => {
       return {
         ...state,
         posts: state.posts.filter(
-          post => post.id !== action.payload
+          post => post.Id !== action.payload
         ),
         loading: false
       };

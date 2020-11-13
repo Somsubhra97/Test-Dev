@@ -6,10 +6,10 @@ const PostItem = ({ post }) => {
   const postContext = useContext(PostContext);
   const { deletePost, setCurrent } = postContext;
 
-  const { title, content } = post;
+  const { Id, title, content } = post;
 
   const onDelete = () => {
-    deletePost(_id);
+    deletePost(Id);
   };
 
   return (

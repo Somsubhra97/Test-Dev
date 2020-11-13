@@ -64,10 +64,9 @@ namespace PostAPI.Controllers
 
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id){ 
-            ServiceResponse<List<Post>> x=null;   
-            Post cmd=_unitOfWork.Posts.GetPostById(id);
-               
+        public async Task<IActionResult> Update(int id, Post cmd){ 
+            ServiceResponse<List<Post>> x=null;  
+                        
             await _unitOfWork.Posts.UpdatePost(cmd);        
             _unitOfWork.Complete(); 
             
