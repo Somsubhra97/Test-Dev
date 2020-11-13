@@ -4,7 +4,7 @@ import Spinner from '../layout/Spinner';
 import PostContext from '../../context/post/postContext';
 import AlertContext from '../../context/contact/alertContext';
 
-const Contacts = () => {
+const Posts = () => {
   const postContext = useContext(PostContext);
   const { posts, error, getPosts, loading } = postContext;
 
@@ -28,7 +28,7 @@ const Contacts = () => {
       {
         (!loading) ?
         (
-          filtered !== null ? filtered.map(post=><PostItem post={post}/>) : posts.map(post => <PosttItem post={post}/>)
+          posts.map(post => <PosttItem post={post}/>)
         )
         :
         (<Spinner /> )
